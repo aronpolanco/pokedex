@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex - 1ra Generación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ENCABEZADO -->
+        <header>
+            <h1>⚡ POKÉDEX <span>PRIMERA GENERACIÓN</span> ⚡</h1>
+            <div class="subtitle">
+                <span>151 Pokémon</span>
+                <span>Región Kanto</span>
+                <span>API RESTful</span>
+            </div>
+        </header>
+
+        <!-- ESTADÍSTICAS -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-value" id="totalPokemon">0</div>
+                <div class="stat-label">Total Pokémon</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="cargados">0</div>
+                <div class="stat-label">Cargados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="tiposUnicos">0</div>
+                <div class="stat-label">Tipos Únicos</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="tiempoCarga">0s</div>
+                <div class="stat-label">Tiempo</div>
+            </div>
+        </div>
+
+        <!-- BARRA DE BÚSQUEDA -->
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar por nombre, número o tipo...">
+                <button onclick="buscarPokemon()">🔍 Buscar</button>
+                <button onclick="mostrarTodos()" class="btn-secondary">📋 Todos</button>
+            </div>
+            
+            <!-- FILTROS POR TIPO -->
+            <div class="filter-buttons" id="filterButtons">
+                <button class="filter-btn active" onclick="filtrarPorTipo('todos', this)">Todos</button>
+                <button class="filter-btn" onclick="filtrarPorTipo('normal', this)">Normal</button>
+                <button class="filter-btn" onclick="filtrarPorTipo('fuego', this)">Fuego</button>
+                <button class="filter-btn" onclick="filtrarPorTipo('agua', this)">Agua</button>
+                <button class="filter-btn" onclick="filtrarPorTipo('planta', this)">Planta</button>
+                <button class="filter-btn" onclick="filtrarPorTipo('electrico', this)">Eléctrico</button>
+                <button class="filter-btn" onclick="filtrarPorTipo('hielo', this)">Hielo</button>
+                <button class="filter-btn" onclick="filtrarPorTipo('lucha', this)">Lucha</button>
+                <button class="filter-btn" onclick="filtrarPorTipo('veneno', this)">Veneno</button>
+                <button class="filter-btn" onclick="filtrarPorTipo('tierra', this)">Tierra</button>
+                <button class="filter-btn" onclick="filtrarPorTipo('volador', this)">Volador</button>
+                <button class="filter-btn" onclick="filtrarPorTipo('psiquico', this)">Psíquico</button>
+                <button class="filter-btn" onclick="filtrarPorTipo('bicho', this)">Bicho</button>
+                <button class="filter-btn" onclick="filtrarPorTipo('roca', this)">Roca</button>
+                <button class="filter-btn" onclick="filtrarPorTipo('fantasma', this)">Fantasma</button>
+                <button class="filter-btn" onclick="filtrarPorTipo('dragon', this)">Dragón</button>
+            </div>
+        </div>
+
+        <!-- LOADING -->
+        <div id="loading" class="loading">
+            <div class="loading-spinner"></div>
+            <p>Cargando Pokémon desde la API...</p>
+        </div>
+
+        <!-- ERROR -->
+        <div id="error" class="error-message"></div>
+
+        <!-- GRILLA DE POKÉMON -->
+        <div id="pokemonContainer" class="pokemon-grid"></div>
+
+        <!-- PAGINACIÓN -->
+        <div class="pagination" id="pagination">
+            <button onclick="cambiarPagina('anterior')" id="btnAnterior" disabled>← Anterior</button>
+            <span id="pageInfo">Página 1</span>
+            <button onclick="cambiarPagina('siguiente')" id="btnSiguiente">Siguiente →</button>
+        </div>
+
+        <!-- PIE DE PÁGINA -->
+        <footer>
+            <p>Pokémon API - Proyecto Web Services</p>
+            <p>2026 - Aron Polanco</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

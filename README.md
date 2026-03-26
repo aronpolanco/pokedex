@@ -1,6 +1,6 @@
 # PokéDex - Proyecto Web
 
-Una aplicación web moderna e interactiva que utiliza la [PokéAPI](https://pokeapi.co/) para mostrar información detallada sobre el mundo Pokémon. Este proyecto fue desarrollado para poner en práctica habilidades de consumo de APIs, manipulación del DOM y diseño responsivo.
+Una aplicación web moderna e interactiva que utiliza mi propia api para mostrar información detallada sobre el mundo Pokémon. Este proyecto fue desarrollado para poner en práctica habilidades de consumo de APIs, manipulación del DOM y diseño responsivo.
 
 
 ##  Características
@@ -14,7 +14,7 @@ Una aplicación web moderna e interactiva que utiliza la [PokéAPI](https://poke
 ## Tecnologías Utilizadas
 
 - **Frontend:** HTML5, CSS3 (Flexbox/Grid), JavaScript (ES6+).
-- **API:** [PokéAPI](https://pokeapi.co/) para la obtención de datos.
+- **API:** [PokéAPI](https://www.pythonanywhere.com/user/aronunisur/) para la obtención de datos.
 - **Herramientas de Estilo:** (Opcional: Tailwind CSS / SASS / Bootstrap).
 - **Despliegue:** (Opcional: GitHub Pages / Vercel / Netlify).
 
